@@ -5,7 +5,7 @@ int find_length(char str[1000])
     int i;
     for (i = 0; str[i] != '\0'; i++)
         ;
-    printf("The length of the string is :%d", i);
+    // printf("The length of the string is :%d", i);
     return i;
 }
 
@@ -40,7 +40,7 @@ void copy_str(char str1[1000], char str2[1000])
     {
         str2[i] = str1[i];
     }
-    printf("The 2nd string is: ");
+    // printf("The 2nd string is: ");
     for (i = 0; i < l1; i++)
     {
         printf("%c", str2[i]);
@@ -101,8 +101,26 @@ void find_occur(char str[])
 
 // 6th program
 
-void check_str()
+int check_str(char str[], char sub_str[])
 {
+    int M = strlen(str);
+    int N = strlen(sub_str);
+
+    for (int i = 0; i <= M - N; i++)
+    {
+        int j, k = 0;
+        for (j = 0; j < N; j++)
+        {
+            if (str[i + j] != sub_str[j])
+                k = 1;
+            break;
+
+            printf("%d : %c %c ", i, str[i + j], sub_str[j]);
+        }
+        if (k == 0)
+            return i + 1;
+    }
+    return -1;
 }
 
 // 7th program

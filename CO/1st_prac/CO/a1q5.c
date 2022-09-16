@@ -1,6 +1,7 @@
+
 #include <stdio.h>
-#include "1st_prac.h"
-#include <string.h>
+#include "bin.h"
+
 int main()
 {
 

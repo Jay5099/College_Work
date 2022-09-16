@@ -1,115 +1,6 @@
-#include <math.h>
+
 #include <stdio.h>
 #include <string.h>
-// 1st Question//
-
-int binary(int num)
-{
-    int i = 0, j = 0;
-    int b_num[20];
-    for (i = 0; num != 0; i++)
-    {
-        b_num[i] = num % 2;
-        num /= 2;
-    }
-
-    printf("The given number is : ");
-    j = i;
-    for (i = 0; i < j; i++)
-    {
-        printf("%d", b_num[j - i - 1]);
-    }
-    printf("\n");
-    return 0;
-}
-
-// 2nd Question//
-
-int decimal(int bin)
-{
-    int i = 0, dec_num = 0, bin_arr[100];
-    if (bin == 0)
-    {
-        dec_num = 0;
-    }
-    else
-    {
-        for (i = 0; bin != 0; i++)
-        {
-            bin_arr[i] = bin % 10;
-            bin /= 10;
-            // printf("%d ", bin_arr[i]);
-
-            dec_num += bin_arr[i] * pow(2, i);
-        }
-        printf(" The decimal number is : %d ", dec_num);
-    }
-    return 0;
-}
-
-// 3rd Question
-
-long factorial(int n)
-{
-    if (n == 0)
-        return 1;
-    else
-        return (n * factorial(n - 1));
-}
-
-// 4th Question
-
-long long int btod(int a[], int k)
-{
-    int t = k;
-    int i = 0;
-    long long int v = 0;
-    for (i = 0; i <= k; i++)
-    {
-        v += pow(2, t) * a[i];
-        t--;
-    }
-    return v;
-}
-
-void addition_unsigned_binary_num_U21CS129(char s1[], char s2[], int l, int m)
-{
-    int a[100], b[100], c[100], i, j, k;
-    for (i = 0; i < l; i++)
-    {
-        a[i] = s1[i] - 48;
-    }
-    for (i = 0; i < m; i++)
-    {
-        b[i] = s2[i] - 48;
-    }
-    int x = btod(a, strlen(s1) - 1);
-    int y = btod(b, strlen(s2) - 1);
-    int z = x + y;
-    dtob4(z);
-}
-void dtob4(int x)
-{
-    int y = x;
-    int a[100];
-    int k, i = 0;
-    while (y != 0)
-    {
-        int temp = y % 2;
-        a[i] = temp;
-        y = y / 2;
-        i++;
-    }
-    printf("The addition of two unsigned binary is -->");
-    for (k = i - 1; k >= 0; k--)
-    {
-        printf("%d", a[k]);
-    }
-    printf("<-----And in decimal its value is %d\n", x);
-}
-
-// 5th q
-
 // to convert decimal to binary
 void bin(int n)
 {
@@ -234,7 +125,7 @@ void addition_signed_binary_numbers_U21CS129(char *s1, char *s2, int size)
         s1 = temp;
     }
     complement_2(s2, size);
-    addition_unsigned_binary_numbers_U21CS129(s1, s2, size);
+    // addition_unsigned_binary_numbers_U21CS129(s1,s2,size);
 
     int len1 = strlen(s1) - 1;
     int len2 = strlen(s2) - 1;
