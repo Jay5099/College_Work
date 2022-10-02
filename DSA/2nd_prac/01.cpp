@@ -34,16 +34,16 @@ int main(){
             case 2:{
                 if(top>=5){
                 cout<<"overflow"<<endl;
-                // top--;
+                top--;
                 break;
                 }
                 else{
                     int temp;
                     cout<<"Enter the value: ";
+                    top++;
                     cin>>temp;
                     a[top]=temp;
                     cout<<"The inserted element is "<<a[top]<<endl;
-                    top++;
                 break;
                 }
             }
