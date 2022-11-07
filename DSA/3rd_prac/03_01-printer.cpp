@@ -48,6 +48,7 @@ int main() {
                 cin>>new_document;
                 cout<<"\n";
                 push(&end,new_document);
+                cout<<"\n";
                 cout<<"your document has been added to queue\n";
                 break;
             }

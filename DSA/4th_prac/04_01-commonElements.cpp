@@ -112,10 +112,10 @@ int main()
 	intersecn = getIntersection(head1, head2);
 	unin = getUnion(head1, head2);
 
-	printf("\n First list is \n");
+	printf("\n First list A is \n");
 	printList(head1);
 
-	printf("\n Second list is \n");
+	printf("\n Second list B is \n");
 	printList(head2);
 
 	printf("\n Intersection list is \n");
