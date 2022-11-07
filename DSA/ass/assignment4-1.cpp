@@ -51,11 +51,6 @@ void createB( int b[],int n)
 node* intersection(struct node *m, struct node *n)
 {
 
-    // if(count(m)>=count(n))
-    // {
-
-    // }
-
     while(m!=NULL)
     {
         while(n!=NULL)
@@ -98,11 +93,6 @@ node* Union(struct node *m, struct node *n)
 {
 
 
-    // while(m->next!=NULL)
-    // {
-    //     m=m->next;
-    // }
-    // m->next=n;
 
         struct node *last;
       while(m!=NULL)
@@ -182,7 +172,7 @@ int count(struct node *p)
 }
 int main()
 {
-    int a[1]={1};
+    int a[6]={1,2,5,6,78,44};
     int b[8]={5,6,8,54,0,3,2,4};
     createA(a,1);
     createB(b,8);
@@ -194,17 +184,3 @@ int main()
     Display(C);
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-//          Here in intersection , we simply take two loop and cheaking the elememt 
-// of one link list in another list , time complexibilty=n square......//

@@ -43,7 +43,7 @@ class Queue{
         // cout<<this->head->data<<" task has been completed\n";
         T val=this->head->data;
         this->head=this->head->next;
-        return make_pair<val,true>
+        return make_pair<val,true>;
       }
       return make_pair(NULL,false);
   }

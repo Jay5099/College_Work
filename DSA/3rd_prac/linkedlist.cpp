@@ -49,6 +49,7 @@ class LinkedList{
           cout<<temp->data<<" --> ";
           temp=temp->next;
       }
+      cout<<"\n";
   }
 };
 
