@@ -1,16 +1,16 @@
 /*
-2. Write a program to implement the stack functions (PUSH and POP) using the Queue
+2. Write a program to implement the stack functions (enqueue and dequeue) using the Queue
 functions (INSERT and DELETE). Input initial queue followed by set of stack
 operations,
 Display Queue after each stack operation.
 Test your program with given Queue as input and perform various Stack Operations
 input:
 Queue : 3: 4 : 8: 10
-Input : POP
+Input : dequeue
 Queue status : 4:8:10
-Input : PUSH 15
+Input : enqueue 15
 Queue status : 15:4:8:10
-Input: POP
+Input: dequeue
 Queue status :4:8:10
 */
 
@@ -23,7 +23,7 @@ struct node
     node *next;
 };
 
-void push(node **end_node, int new_document)
+void enqueue(node **end_node, int new_document)
 {
     node *new_node = new node();
     new_node->document = new_document;
@@ -31,7 +31,7 @@ void push(node **end_node, int new_document)
     (*end_node) = new_node;
 }
 
-void pop(node *start_node, node **end_node)
+void dequeue(node *start_node, node **end_node)
 {
     node *cur = start_node;
     while ((cur->next) != *end_node)
@@ -63,7 +63,7 @@ int main()
     while (1)
     {
         int choice;
-        cout << "\nenter your choice\n1.push\n2.pop\n3.display\n4.exit\n:->";
+        cout << "\nenter your choice\n1.enqueue\n2.dequeue\n3.display\n4.exit\n:->";
         cin >> choice;
         switch (choice)
         {
@@ -72,13 +72,13 @@ int main()
             int new_document;
             cout << "\nenter the data to be inserted : \n";
             cin >> new_document;
-            push(&end, new_document);
+            enqueue(&end, new_document);
             cout << "your value has been added to queue\n";
             break;
         }
         case 2:
         {
-            pop(start, &end);
+            dequeue(start, &end);
         }
         case 3:
         {
